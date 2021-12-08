@@ -130,6 +130,47 @@ body {
 .dot:nth-child(odd) {
     animation: dot-odd 2s infinite alternate linear;
 }
+.cont-figures {
+    position: relative;
+    height: 500px;
+}
+.figure {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    animation: moveFigure 2s infinite linear;
+}
+.figure1 {
+    border-radius: 50%;
+    background-color: aquamarine;
+    animation-delay: 0.5s;
+}
+.figure2 {
+    border-radius: 40%;
+    background-color: bisque;
+    animation-delay: 1s;
+}
+.figure3 {
+    border-radius: 10%;
+    background-color: blueviolet;
+    animation-delay: 1.5s;
+}
+.figure4 {
+    border-radius: 20%;
+    background-color: chocolate;
+    animation-delay: 2s;
+}
+@keyframes moveFigure {
+    25% {
+        transform: translate(150%) scale(0.5);
+    }
+    50% {
+        transform: translate(150%, 150%);
+    }
+    75% {
+        transform: translate(0, 150%) scale(0.5);
+    }
+}
 @keyframes dot-move {
     from {
         transform: translateY(0);
